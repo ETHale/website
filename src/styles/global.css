@@ -1,0 +1,43 @@
+:root {
+  --color-navy: #04151F;
+  --color-teal: #183A37;
+  --color-cream: #EFD6AC;
+  --color-orange: #C44900;
+  --color-purple: #432534;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-navy);
+    color: var(--color-cream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    color: var(--color-cream);
+}
+
+a {
+    color: var(--color-orange);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    padding: 20px;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}

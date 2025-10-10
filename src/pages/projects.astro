@@ -1,0 +1,39 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const projects = [
+    {
+        title: "Project One",
+        description: "A brief description of Project One.",
+        image: "/path/to/image1.jpg",
+        link: "https://link-to-project-one.com"
+    },
+    {
+        title: "Project Two",
+        description: "A brief description of Project Two.",
+        image: "/path/to/image2.jpg",
+        link: "https://link-to-project-two.com"
+    },
+    {
+        title: "Project Three",
+        description: "A brief description of Project Three.",
+        image: "/path/to/image3.jpg",
+        link: "https://link-to-project-three.com"
+    }
+];
+
+---
+
+<MainLayout>
+    <h1>My Projects</h1>
+    <div class="projects">
+        {projects.map(project => (
+            <div class="project">
+                <h2>{project.title}</h2>
+                <img src={project.image} alt={project.title} />
+                <p>{project.description}</p>
+                <a href={project.link} target="_blank">View Project</a>
+            </div>
+        ))}
+    </div>
+</MainLayout>
