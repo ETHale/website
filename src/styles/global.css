@@ -8,19 +8,22 @@
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: "Roboto Slab", Monospace;
     background-color: var(--color-navy);
     color: var(--color-cream);
+    font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: var(--color-cream);
+    font-size: 1.5rem;
 }
 
 a {
     color: var(--color-orange);
     text-decoration: none;
+    font-size: 1.25rem;
 }
 
 a:hover {
@@ -40,4 +43,66 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-content {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-cream);
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-links a {
+    font-size: 1rem;
+    color: var(--color-orange);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-orange);
+    font-size: 1rem;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+b {
+    color : var(--color-orange);
 }
