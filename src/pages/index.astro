@@ -1,14 +1,72 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+
+const projects = [
+    {
+        title: "Project One",
+        description: "A brief description of Project One.",
+        image: "/path/to/image1.jpg",
+        link: "https://link-to-project-one.com"
+    },
+    {
+        title: "Project Two",
+        description: "A brief description of Project Two.",
+        image: "/path/to/image2.jpg",
+        link: "https://link-to-project-two.com"
+    },
+    {
+        title: "Project Three",
+        description: "A brief description of Project Three.",
+        image: "/path/to/image3.jpg",
+        link: "https://link-to-project-three.com"
+    }
+];
 
 ---
 
 <MainLayout>
     <main>
-        <section class="center-content">
-            <h1>Hi!</h1>
+        <Section id="hero" title="Hi!">
             <h2>I'm Ethan</h2>
             <p>Welcome to my website!</p>
-        </section>
+        </Section>
+
+        <Section id="about" title="About Me">
+            <p>
+                I'm a final year MEng, BSc Computer Science student at the University of Leeds. I am working part-time with the wonderful 
+                people at <a href="https://drs.software/" target="_blank">DRS</a> as a Software Engineer. I have had the opportunity
+                to work on some really exciting projects. Both at university and at DRS.
+            </p>
+
+            <p>
+                I've worked on all things from complex web apps built on top of <b>C++</b> code compiled to <b>WebAssembly</b>
+                to implementing and testing custom algorithms for drone swarm <b>pathfinding</b>. In professional, academic, and personal settings.
+            </p>
+
+            <p>
+                But I get up to a lot more than just programming things. I'm a practising <b>Christian</b>, regularly attending 
+                and serving at church. I love numerous forms of exercise and have a long-term goal to do an <b>Ironman</b>.
+                I play and run D&D and paint Warhammer.
+            </p>
+
+            <h2>Non-Technical Stuff I've done:</h2>
+            <div style="margin-top: 2rem;">
+
+            </div>
+        </Section>
+
+        <Section id="projects" title="My Projects">
+            <div class="projects">
+                {projects.map(project => (
+                    <div class="project">
+                        <h2>{project.title}</h2>
+                        <img src={project.image} alt={project.title} />
+                        <p>{project.description}</p>
+                        <a href={project.link} target="_blank">View Project</a>
+                    </div>
+                ))}
+            </div>
+        </Section>
     </main>
 </MainLayout>
