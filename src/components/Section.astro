@@ -1,9 +1,9 @@
 ---
 // Props for the Section component
-const { id, title, children } = Astro.props;
+const { id, title, children, class: customClass } = Astro.props;
 ---
 
-<section id={id} class="center-content">
+<section id={id} class={`center-content ${customClass}`}>
     <h1>{title}</h1>
     <slot>{children}</slot>
 </section>

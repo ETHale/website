@@ -159,6 +159,15 @@ section p {
     margin-bottom: 15px;
 }
 
+/* Utility class to make a section fill the entire viewport */
+.fullscreen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Ensure sections expand vertically */
 section {
     width: 100%;
