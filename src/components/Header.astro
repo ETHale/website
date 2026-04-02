@@ -1,6 +1,7 @@
 ---
 ---
-<header>
+
+<header id="site-header">
     <nav class="navbar">
         <div class="navbar-brand">
             <a href="#hero">Ethan Hale</a>
@@ -12,3 +13,21 @@
         </div>
     </nav>
 </header>
+
+<script>
+    const header = document.getElementById('site-header');
+
+    const handleScroll = () => {
+        const fullscreenSection = document.querySelector('.fullscreen');
+        if (!fullscreenSection) return; // Ensure the fullscreen section exists
+
+        const rect = fullscreenSection.getBoundingClientRect();
+        if (rect.top < 0 && rect.bottom > window.innerHeight) {
+            header.classList.add('hidden');
+        } else {
+            header.classList.remove('hidden');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+</script>
