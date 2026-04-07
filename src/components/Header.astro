@@ -20,6 +20,7 @@
     const handleScroll = () => {
         const fullscreenSection = document.querySelector('.fullscreen');
         if (!fullscreenSection) return; // Ensure the fullscreen section exists
+        if (!header) return; // Ensure the header exists
 
         const rect = fullscreenSection.getBoundingClientRect();
         if (rect.top < 0 && rect.bottom > window.innerHeight) {
