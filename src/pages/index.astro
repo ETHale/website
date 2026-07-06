@@ -1,14 +1,15 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-
+import { FadeInText } from '@astroanimate/core';
+import Area from '../components/Area.astro';
 ---
 
 <MainLayout>
-    <main>
-        <section class="center-content">
+    <Area>
+        <FadeInText>
             <h1>Hi!</h1>
             <h2>I'm Ethan</h2>
             <p>Welcome to my website!</p>
-        </section>
-    </main>
+        </FadeInText>
+    </Area>
 </MainLayout>
