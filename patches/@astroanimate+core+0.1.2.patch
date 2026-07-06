@@ -1,0 +1,25 @@
+diff --git a/node_modules/@astroanimate/core/dist/components/Dropdown/Dropdown.astro b/node_modules/@astroanimate/core/dist/components/Dropdown/Dropdown.astro
+index d04b8ae..bbbc496 100644
+--- a/node_modules/@astroanimate/core/dist/components/Dropdown/Dropdown.astro
++++ b/node_modules/@astroanimate/core/dist/components/Dropdown/Dropdown.astro
+@@ -252,13 +252,13 @@ const {
+ 
+ {enhance && (
+   <script>
+-    import { enhanceDropdown } from "../../internal/dropdown";
++    //import { enhanceDropdown } from "../../internal/dropdown";
+ 
+     // ✅ CRITERION 6: PRIMARY reduced motion guard lives here in .astro script block
+-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+-      document.querySelectorAll<HTMLElement>('[data-dropdown][data-enhance="true"]').forEach((el) => {
+-        enhanceDropdown(el);
+-      });
+-    }
++    //if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
++    //  document.querySelectorAll<HTMLElement>('[data-dropdown][data-enhance="true"]').forEach((el) => {
++    //    enhanceDropdown(el);
++    //  });
++    //}
+   </script>
+ )}
+\ No newline at end of file
